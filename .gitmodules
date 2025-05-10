@@ -1,0 +1,6 @@
+[submodule "backend"]
+	path = backend
+	url = https://github.com/placeholderOrganisation/gameStore-backend.git
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/placeholderOrganisation/gameStore-frontend.git
