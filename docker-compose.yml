@@ -1,6 +1,6 @@
 services:
   backend:
-    build: ./back-end
+    build: ./backend
     ports:
       - "${PORT}:${PORT}"
     environment:
@@ -9,7 +9,7 @@ services:
     depends_on:
       - mongodb
     volumes:
-      - ./back-end:/usr/src/app
+      - ./backend:/usr/src/app
       - /usr/src/app/node_modules
       - /usr/src/app/dist
 
@@ -22,7 +22,7 @@ services:
 
   frontend:
     build:
-      context: ./front-end
+      context: ./frontend
       args:
         VITE_GOOGLE_API_KEY: ${VITE_GOOGLE_API_KEY}
         VITE_GOOGLE_SHEETS_ID: ${VITE_GOOGLE_SHEETS_ID}
