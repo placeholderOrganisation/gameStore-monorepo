@@ -24,8 +24,7 @@ services:
     build:
       context: ./frontend
       args:
-        VITE_GOOGLE_API_KEY: ${VITE_GOOGLE_API_KEY}
-        VITE_GOOGLE_SHEETS_ID: ${VITE_GOOGLE_SHEETS_ID}
+        VITE_BACKEND_URL: ${VITE_BACKEND_URL}
     ports:
       - "80:80"
     depends_on:

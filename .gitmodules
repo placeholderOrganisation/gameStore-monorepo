@@ -4,3 +4,7 @@
 [submodule "frontend"]
 	path = frontend
 	url = https://github.com/placeholderOrganisation/gameStore-frontend.git
+[submodule "back-end"]
+	branch = master
+[submodule "front-end"]
+	branch = master
