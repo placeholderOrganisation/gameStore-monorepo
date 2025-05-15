@@ -8,10 +8,6 @@ services:
       - PORT=${PORT}
     depends_on:
       - mongodb
-    volumes:
-      - ./backend:/usr/src/app
-      - /usr/src/app/node_modules
-      - /usr/src/app/dist
 
   mongodb:
     image: mongo:latest
