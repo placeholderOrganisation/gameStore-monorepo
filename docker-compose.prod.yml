@@ -14,15 +14,7 @@ services:
       - EMAILJS_TEMPLATE_ID=${EMAILJS_TEMPLATE_ID}
       - EMAILJS_PUBLIC_KEY=${EMAILJS_PUBLIC_KEY}
       - EMAILJS_PRIVATE_KEY=${EMAILJS_PRIVATE_KEY}
-    depends_on:
-      - mongodb
-
-  mongodb:
-    image: mongo:latest
-    ports:
-      - "27017:27017"
-    volumes:
-      - mongodb_data:/data/db
+    # No depends_on or mongodb
 
   frontend:
     build:
@@ -33,6 +25,3 @@ services:
       - "80:80"
     depends_on:
       - backend
-
-volumes:
-  mongodb_data:
